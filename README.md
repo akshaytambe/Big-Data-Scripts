@@ -4,9 +4,9 @@ Python Scripts for working with Big Data Files
 Hadoop Documentation: http://hadoop.apache.org/docs/current/hadoop-streaming/HadoopStreaming.html
 NYU HPC Cluster: https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Dumbo.
 
-# Sample Big Data Python Script Run Instructions for Understanding NYU's HPC Cluster
+## Sample Big Data Python Script Run Instructions for Understanding NYU's HPC Cluster
 
-## Step 1: Accessing the Hadoop Cluster
+### Step 1: Accessing the Hadoop Cluster
 Logging in to the cluster:
 1. Log into the main HPC node. To do this,
 a. On MacOS, open the terminal and type `ssh your_netid@hpc.nyu.edu`
@@ -23,16 +23,16 @@ don’t recommend it unless you really know what you’re doing.)
 You are now logged in to dumbo. Type `pwd` to see what directory you are currently in (it should
 be ‘/home/your-netID’).
 
-## Step 2: Create aliases for Hadoop
+### Step 2: Create aliases for Hadoop
 You will be using a set of commands to run hadoop jobs, and it will save you some time to first
 create aliases for them:
 1. Log into "dumbo" following the instructions above and type the following commands on
 your terminal (Note: you should not have any spaces around "=" signs, and copying and
 pasting will not work):
-`alias hfs='/usr/bin/hadoop fs '`
-`export HAS=/opt/cloudera/parcels/CDH-5.9.0-1.cdh5.9.0.p0.23/lib`
-`export HSJ=hadoop-mapreduce/hadoop-streaming.jar`
-`alias hjs='/usr/bin/hadoop jar $HAS/$HSJ'`
+* `alias hfs='/usr/bin/hadoop fs '`
+* `export HAS=/opt/cloudera/parcels/CDH-5.9.0-1.cdh5.9.0.p0.23/lib`
+* `export HSJ=hadoop-mapreduce/hadoop-streaming.jar`
+* `alias hjs='/usr/bin/hadoop jar $HAS/$HSJ'`
 2. To be able to re-use these aliases every time you login to dumbo, you can append the
 above lines to the end of your .bashrc file (full path: /home/your-netID/.bashrc).
 To edit a file from the command line, you can use any of the built-in text editors --- vi,
@@ -45,7 +45,7 @@ are many tutorials and how-tos for these programs online (google for them).
 to create the aliases. Bash ‘sources’ .bashrc automatically at login, so you won’t have to
 type this command again.
 
-## Step 3: Running a Hadoop Job
+### Step 3: Running a Hadoop Job
 In this part, we will run an example MapReduce program on Dumbo using Hadoop-Streaming.
 Log in to Dumbo by following instructions above.
 The example program we will run is a wordcount program. We give a large data file as input
